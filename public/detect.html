@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Scene</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/logo.png" type="image/x-con" />
+  </head>
+  <body>
+    <nav>
+      <h2><a href="./index.html">Green Scene</a></h2>
+      <ul>
+        <li>
+          <a href="./index.html">Home</a>
+        </li>
+        <li>
+          <a class="nav-active" href="./detect.html">Detect</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="card">
+        <div>
+          <h1>Ayo Kenali Kebersihan Lingkungan Anda !!!</h1>
+          <p class="justify">
+            Green Scene adalah sebuah website dinamis yang dapat membantu masyarakat untuk memahami pentingnya kebersihan lingkungan.
+            Green Scene dilengkapi dengan fitur deteksi Machine Learning sehingga dapat mendeteksi kebersihan lingkungan dari gambar yang diupload.
+            </br> </br> 
+            Untuk mengenali apakah lingkungan di sekitar mu termasuk dalam lingkungan kotor atau bersih, 
+            silahkan upload potret lingkungan sekitar mu melalui tombol "Choose File" dan klik tombol "Deteksi" 
+            untuk mengetahui hasil nya.
+
+
+          </p>
+        </div>
+        <img id="previewgambar" />
+        <br />
+        <input id="gambar" type="file" onchange="getBase64Image(this)" />
+        <br />
+        <div id="hasil"></div>
+        <br />
+        <button id="deteksi" class="button">Deteksi</button>
+      </div>
+    </div>
+    <div class="background-full-size"></div>
+
+    <footer>
+      <div id="text-footer">
+        <p>&copy; CSD-067 Team for Dicoding Capstone Project</p>
+      </div>
+    </footer>
+
+    <div class="popup hidden" id="popup-dirty">
+      <div class="popup-overlay"></div>
+      <div class="popup-container">
+        <div class="popup-photo-container">
+          <img src="./assets/process.png" />
+        </div>
+        <div class="popup-content-container">
+          <h1>Lingkungan Kotor</h1>
+          <p>
+            Potret Lingkungan mu terlihat kotor. Bagaimana tindakan yang harus kamu lakukan agar 
+            lingkungan mu menjadi bersih ?
+            <ol>
+              <li>Menyediakan tempat sampah</li>
+              <li>Membuang sampah ke tempat sampah</li>
+              <li>Melakukan kegiatan kerja bakti atau gotong royong antar masyarakat sekitar untuk menjaga kebersihan</li>
+            </ol>
+            <b>Keep Clean and Save our Earth !!!</b>
+          </p>
+          <button class="button popup-button">Okay</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup hidden" id="popup-clean">
+      <div class="popup-overlay"></div>
+      <div class="popup-container">
+        <div class="popup-photo-container">
+          <img src="./assets/process.png" />
+        </div>
+        <div class="popup-content-container">
+          <h1>Lingkungan Bersih</h1>
+          <p>
+            Potret Lingkungan mu bersih dan sehat. Manfaat apa yang kamu peroleh
+            dari lingkungan yang bersih ?
+            <ol>
+              <li>Lingkungan mu menjadi enak dan nikmat dipandang orang lain</li>
+              <li>Kualitas udara di lingkungan mu menjadi lebih baik</li>
+              <li>Mengurangi resiko penyebaran penyakit</li>
+            </ol>
+            <b>Keep Clean and Save our Earth !!!</b>
+          </p>
+          <button class="button popup-button">Okay</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./image.js"></script>
+  </body>
+</html>
